@@ -150,6 +150,8 @@ alias d="nr dev"
 alias b="nr build"
 alias t="nr test"
 
+alias v="nvim"
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
