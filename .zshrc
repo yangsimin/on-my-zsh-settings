@@ -160,3 +160,6 @@ alias abrew='arch -arm64 /opt/homebrew/bin/brew'
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# 命令行启用 Vim 模式
+bindkey -v
