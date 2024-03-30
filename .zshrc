@@ -131,35 +131,41 @@ function unproxy(){
 	echo "关闭代理"
 }
 
-# 设置 homebrew 镜像
+# homebrew
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/bottles #ckbrew
 eval $(/usr/local/Homebrew/bin/brew shellenv) #ckbrew
+alias brew='arch -arm64 /opt/homebrew/bin/brew'
+alias abrew='arch -arm64 /opt/homebrew/bin/brew'
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+export HOMEBREW_PREFIX=/opt/homebrew
 
 # 设置路径别名
 alias cdweb="~/knowledge/computer_science/web_frontend/"
 alias cdcode="~/knowledge/computer_science/web_frontend/project_personal"
 alias cdtemp="~/Library/Mobile\ Documents/com~apple~CloudDocs/code/web/nothing"
 alias cdbooks="~/Library/Mobile\ Documents/com~apple~CloudDocs/书"
-
 # 设置 lazygit 别名
 alias lg="lazygit"
-
 # 设置 npm 命令
 alias d="nr dev"
 alias b="nr build"
 alias t="nr test"
 
+# nvim
 alias v="nvim"
+export NEOVIM_PATH=/opt/homebrew/bin/nvim
+
+alias gsw="my-git-switch"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-alias brew='arch -arm64 /opt/homebrew/bin/brew'
-alias abrew='arch -arm64 /opt/homebrew/bin/brew'
-alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # 命令行启用 Vim 模式
 bindkey -v
+
+# bun completions
+# [ -s "/Users/simon/.bun/_bun" ] && source "/Users/simon/.bun/_bun"
