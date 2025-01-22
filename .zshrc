@@ -147,16 +147,25 @@ alias cdtemp="~/Library/Mobile\ Documents/com~apple~CloudDocs/code/web/nothing"
 alias cdbooks="~/Library/Mobile\ Documents/com~apple~CloudDocs/书"
 # 设置 lazygit 别名
 alias lg="lazygit"
+
 # 设置 npm 命令
 alias d="nr dev"
 alias b="nr build"
 alias t="nr test"
+alias tu="nr test -u"
+alias m="nr mock"
+alias s="nr start"
 
 # nvim
 alias v="nvim"
 export NEOVIM_PATH=/opt/homebrew/bin/nvim
 
 alias gsw="my-git-switch"
+
+# 设置 docker 命令
+alias dr="docker run"
+alias db="docker build"
+alias dps="docker ps" 
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -166,6 +175,8 @@ export LANG=en_US.UTF-8
 
 # 命令行启用 Vim 模式
 bindkey -v
+
+export PATH=node_modules/.bin:$PATH
 
 # bun completions
 # [ -s "/Users/simon/.bun/_bun" ] && source "/Users/simon/.bun/_bun"
